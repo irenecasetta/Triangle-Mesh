@@ -4,7 +4,8 @@
 
 body {
 	background-color: rgb(255, 255, 255); /* white, #FFFFFF */
-	margin: 2em;
+	margin-top: 1em;
+	margin-left: 2em;
 	font-family: elza-text, sans-serif;
 	font-weight: 300;
 	line-height: 1.2;
@@ -23,7 +24,7 @@ p {
 }
 
 h1 {
-	margin: 1;
+	margin: 0;
 	font-size: 3em;
 }
 
@@ -62,6 +63,28 @@ ul {
 	padding: 0;
 }
 
+button{
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	font-size: 15px;
+	top: 48px;
+	right: 25px;
+
+
+}
+
+.button{
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	font-size: 15px;
+	top: 0px;
+	right: 80px;
+
+
+}
+
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
 @media only screen and (max-width: 600px) {
@@ -81,4 +104,9 @@ ul {
 	img {
 		width: 100%;
 	}
+	button{
+		width:30%;
+		top:60px;
+	}
+	
 }
