@@ -14,7 +14,7 @@ function windowResized(){
 function draw() {
 const total = sliderino.value();
 fill (0)
-  background(200);
+  background(255);
   lights();
   const r = min(width, height)*0.4;
   rotateY(mouseX/350)
