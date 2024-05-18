@@ -113,19 +113,24 @@ ul {
 		font-size: 12px;
 		font-weight: 500;
 		right: 2%;
-		top:5%;
+		top:3%;
 	}
 
 	#voronoi{
 		width:window;
 		font-size:12px;
 		right: 2%;
-		top: 7%;
+		top: 5%;
 		font-weight: 500;
 	}
 
 	h1{
-		font-size: 30px;
+		font-size: px;
+		max-width: 50%;
+	}
+
+	p{
+		margin-right:20px;
 	}
 	
 }
