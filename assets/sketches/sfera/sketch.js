@@ -3,7 +3,6 @@ let sliderino;
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  colorMode(HSB);
   sliderino = createSlider(4,30,6,2)
   sliderino.position(30,30)
   sliderino.size(180)
@@ -14,7 +13,8 @@ function windowResized(){
 
 function draw() {
 const total = sliderino.value();
-  background(30);
+fill (0)
+  background(200);
   lights();
   const r = min(width, height)*0.4;
   rotateY(mouseX/350)
@@ -34,16 +34,11 @@ const total = sliderino.value();
   }
 
   for (let i = 0; i < total; i++) {
-    if (i % 2 === 0) {
-      fill(0);
-    } else {
-      fill(255);
-    }
     beginShape(TRIANGLE_STRIP);
     for (let j = 0; j < total + 1; j++) {
       const v1 = globe[i][j];
       stroke(255);
-      strokeWeight(2);
+      strokeWeight(1);
       vertex(v1.x, v1.y, v1.z);
       const v2 = globe[i + 1][j];
       vertex(v2.x, v2.y, v2.z);
