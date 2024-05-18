@@ -91,7 +91,7 @@ ul {
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
 	header,
 	section {
 		grid-template-columns: 1fr;
