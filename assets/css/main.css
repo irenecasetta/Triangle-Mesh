@@ -91,7 +91,7 @@ ul {
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 	header,
 	section {
 		grid-template-columns: 1fr;
@@ -112,13 +112,15 @@ ul {
 		width:window;
 		font-size: 12px;
 		font-weight: 500;
+		right: 2%;
+		top:5%;
 	}
 
 	#voronoi{
 		width:window;
 		font-size:12px;
-		right: 10px;
-		top: 34px;
+		right: 2%;
+		top: 7%;
 		font-weight: 500;
 	}
 	
