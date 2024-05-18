@@ -76,46 +76,54 @@
 				<b>Mesh miste</b> (triangolari e quadrangolari);<br>
 				<b>Mesh</b> composte da <b>poligoni arbitrari</b>;<br>
 				</p>
+				
+				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
+				<p>
 				<p>
 				Nello specifico la <b>“triangle mesh”</b> è costituita da un insieme di triangoli collegati fra loro attraverso <b>spigoli e vertici comuni</b>. 
 				Il termine mesh in inglese significa letteralmente "maglia", "rete".
 				</p>
-				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
 				<p>
-				Considerazioni Triangolo:
-				definito da tre vertici
-				definito nel medesimo piano contenente gli stessi vertici
-				il vettore normale al piano è la normale del triangolo
-
-
-				Triangle meshes: 
-				Triangoli disposti nello spazio tridimensionale che sono collegati attraverso vertici e spigoli per formare una superficie modellabile
-				Dal punto di vista geometrico, una mesh è una superficie planare, quasi interamente; eccezione per i bordi, dove inevitabilmente i triangoli si uniscono e creano irregolarità. In questo caso le irregolarità date dalle congiunzioni vengono corrette visivamente in modo tale da ottenere una superficie quanto più liscia possibile.
+					Elementi che compongono una mesh: 
+					</p>
+					<p>
+				<b>vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
 				</p>
+				<p>
+				<b>lato (edge)</b> connessione tra due vertici;
+					</p>
+					<p>
+					<b>Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
+				</p>
+				<p>
+					<b>Spigoli (Edges):</b> Gli spigoli sono i bordi che collegano due vertici. Ogni spigolo appartiene a una o più facce.
+				</p>
+				<p>
+					<b>Texture Mapping:</b> Le mesh poligonali possono essere "mappate" con texture per aggiungere dettagli visivi. Ciò comporta la proiezione di una texture 2D su una superficie 3D in base alle coordinate della mappa UV. Un esempio concreto può essere il mappamondo sferico e l’atlante bidimensionale. 
+				</p>
+				<p>
+
+			
+					<b>Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
+					</p>
+					//*immagine stripssssssssss *//
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 2:<br>Trigonometria</h4>
+			<h4 class="titolo-sezione">Il vettore "normale"<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					Ogni <b>mesh-face</b> presenta un <b>lato anteriore</b> ed un <b>lato posteriore.</b> Il <b>vettore perpendicolare</b> rispetto ad una face è definito <b>“normale”</b> alla face. La normale viene utilizzata per determinare l’angolo di riflessione dei raggi luminosi che colpiscono la superficie della mesh-face. In questa situazione valgono le proprietà di riflessione dei raggi, un raggio incidente sarà uguale per ampiezza al raggio riflesso.
+</p>
+<p>
+					Il <b>vertice</b> ha anche una normale rivolta nella direzione determinata dalla<b> media tra le direzioni delle normali delle superfici</b> a cui appartiene il vertice. 
+
 				</p>
+
+				/* immagine vettoriale triangolo con vertici e freccce che indicano le normali dei vertici/*
 				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/classe_vettori/"></iframe>
 			</div>
 		</section>
@@ -123,23 +131,11 @@
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 3:<br>Linea tratteggiata</h4>
+			<h4 class="titolo-sezione">Manifold-Meshes<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					La mesh può essere definita <b>Manifold</b> dal momento in cui ciascun spigolo condivide un <b>massimo di 2 facce; </b>
+
 				</p>
 				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
 			</div>
@@ -148,53 +144,27 @@
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 4:<br>Spirograph</h4>
+			<h4 class="titolo-sezione">Relazione di Eulero<br>Manifold Closed-meshes</h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/spirograph/"></iframe>
+					In matematica, e più precisamente in geometria e topologia, la caratteristica di Eulero è un numero intero invariante che descrive alcuni aspetti della forma di uno spazio topologico. 
+					</p>
+					<p>
+                     Si denota comunemente con 𝒳. </p>
+
+					 <p><b>Formula: V + F - E = X </b></p>
+					 <p>
+V = vertici</p>
+<p>
+E = spigoli</p>
+
+F = facce
+</p>
 
 			</div>
 		</section>
 
-<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 5:<br> Radianti (GIF)</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif">
-			</div>
-		</section>
 
 <!-- --------------------------------------------------------------------- -->
 

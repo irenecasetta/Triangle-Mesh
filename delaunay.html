@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Triangle Mesh</title>
+	<title>Triangolazione di Delaunay</title>
 	<meta name="author"      content="Nome Cognome">
 	<meta name="description" content="Titolo Pagina: descrizione">
 	<meta name="viewport"    content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
 
 		<header>
 			<span></span>
-			<h1>Delaunay</h1>
+			<h1>Triangolazione di Delaunay</h1>
 		</header>
 
 		<!-- --------------------------------------------------------------------- -->
@@ -29,20 +29,26 @@
 			<h4 class="titolo-sezione">Nozioni di base</h4>
 			<div class="contenuto-sezione">
 				<p>
-				Nello specifico la <b>“triangle mesh”</b> è costituita da un insieme di triangoli collegati fra loro attraverso <b>spigoli e vertici comuni</b>. 
-				Il termine mesh in inglese significa letteralmente "maglia", "rete".
+					La triangolazione prende il nome da <b>Boris Delaunay</b> per il suo lavoro su di essa dal 1934.
+					<b>Questo criterio viene  utilizzato nella creazione di meshes triangolari dato un numero di punti disposti arbitrariamente nello spazio. </b>
+					L’obiettivo è proprio quello di creare una superficie formata da triangoli di punti contigui vicini. Le intersezioni dei punti vengono collegate tramite una <b>rete di triangoli non sovrapposti </b>ed il più possibile compatti, fondamentale è che nessun punto cada all’interno di alcun <b>circumcerchio. </b>
+					</p>
+					<p>
+					NB: Il circumcerchio è la circonferenza circoscritta a un triangolo, ovvero l'unica circonferenza passante per tutti i suoi tre vertici, il cui centro è detto circocentro e il raggio circumraggio.
+					
 				</p>
+			/////*	NOSTRO SKETCH INBTERATTIVO DEL TRIANGOLO CHE SI FORMA SCHIACCIANDO IL MOUSE E SCEGLIENDO I PUNTI)
+
 				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
 				<p>
-				Considerazioni Triangolo:
-				definito da tre vertici
-				definito nel medesimo piano contenente gli stessi vertici
-				il vettore normale al piano è la normale del triangolo
+					E’ chiaro che il cerchio svolge un ruolo chiave nel <b>criterio di tassellazione di Delaunay,</b> una triangolazione basata su questo criterio è considerabile ottimale dal momento in cui: </p>
+					<p>
+- Tutti i triangoli formati dalla maglia sono <b>non degenerati.</b> Cioè, nessun insieme di tre punti collineari è collegato insieme in un unico triangolo.
 
+</p>
+<p>- Tutti i triangoli nella maglia producono un <b>circumcerchio che non contiene altri vertici</b> della mesh ad eccezione dei tre vertici che definiscono il triangolo.
+Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.
 
-				Triangle meshes: 
-				Triangoli disposti nello spazio tridimensionale che sono collegati attraverso vertici e spigoli per formare una superficie modellabile
-				Dal punto di vista geometrico, una mesh è una superficie planare, quasi interamente; eccezione per i bordi, dove inevitabilmente i triangoli si uniscono e creano irregolarità. In questo caso le irregolarità date dalle congiunzioni vengono corrette visivamente in modo tale da ottenere una superficie quanto più liscia possibile.
 				</p>
 			</div>
 		</section>
@@ -50,127 +56,82 @@
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 2:<br>Trigonometria</h4>
+			<h4 class="titolo-sezione">Esempio pratico<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					Il triangolo ABC viene inscritto all’interno di un circumcerchio, se poniamo il vertice D esternamente alla circonferenza collegando ulteriormente i vertici per aggiungere il triangolo CBD, la rete risultante apparirà ottimale dal punto di vista del criterio di Delaunay.  
+
 				</p>
+				////////IMMAGINE VETTORIALE TRIANGOLI VEDI DOCUMENTO GOOGLE, IMMAGINE DA DRIVE
 				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/classe_vettori/"></iframe>
+			
+				<p>
+
+					Se il vertice D fosse posto all’interno del circumcerchio del Triangolo ABC, la rete risultante non soddisferebbe i criteri di Delaunay, il vertice D sarebbe all'interno del cerchio per ABC, ma il vertice A sarebbe all'interno del cerchio per il triangolo CBD.
+
+				</p>
+				//////immagine vedi documento google, immagine da drive
+<p>
+	
+Ripristino dell’ottimalità di Delaunay 
+In che modo possiamo correggere la suddivisione secondo il criterio? Infrangere il collegamento tra i vertici CB e creare un segmento AD. Ora il vertice C non coincide con la circonferenza del triangolo ABD ed il vertice B non coincide con il circumcerchio del triangolo CAD.
+
+
+
+</p>
+/////IMMAGINE VEDI DOC GOOGLE
+<p>
+	L'operazione che commuta il bordo comune tra due triangoli adiacenti è talvolta chiamata "flip".
+Quando un vertice viene inserito nella triangolazione, è possibile che questo si collochi all’interno di una circonferenza, in questi casi sarà necessaria la modifica delle forme preesistenti. Si crea così una nuova struttura che rispetta il criterio di Delaunay. 
+
+
+
+</p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 3:<br>Linea tratteggiata</h4>
+			<h4 class="titolo-sezione">Algoritmi nella Triangolazione Delaunay<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					<b>1. Incrementale </b>
+					</p>
+					<p>
+ I punti vengono aggiunti uno ad uno ed ad ogni passo le proprietà della triangolazione di Delaunay vengono mantenute. Dal momento in cui vengono aggiunti punti, questi una volta congiunti ai vertici dei triangoli adiacenti devono soddisfare i requisiti. 
+
+				</p>
+				<p>
+					<b>2. Dividi et impera-Algoritmo DeWall</b>
+					</p><p>
+					- Dopo aver stabilito il piano α, si costruisce il primo triangolo
+					</p>
+<p>
+- partendo dalla faccia ( lato in 2d) che interseca α si costruisce il triangolo successivo scegliendo il punto, dall’altra parte di α, che minimizza il raggio della circonferenza circoscritta.
+<p>
+- Applicare ricorsivamente l’algoritmo a S+ e S-.</p> 
+<p>
+- Restituire l’unione dei tre.</p>
+
+<p> 
+
+	//////SKETCH CON TUTTI I TRIANGOLINI CHE SI MUOVONO
+</p>
+
+
+
+
 				</p>
 				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
 			</div>
 		</section>
 
-		<!-- --------------------------------------------------------------------- -->
+		
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 4:<br>Spirograph</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/spirograph/"></iframe>
 
-			</div>
-		</section>
 
-<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 5:<br> Radianti (GIF)</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif">
-			</div>
-		</section>
-
-<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
-			<h4 class="titolo-sezione">Bibliografia</h4>
-			<div class="contenuto-sezione">
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-					<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
-					<li>In cursus aliquam odio eu eleifend</li>
-					<li>Ut sed auctor magna</li>
-					<li>In hac habitasse platea dictumst</li>
-					<li>Aliquam aliquam nisl mi</li>
-					<li>Phasellus et orci elit</li>
-					<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-					<li>Nam consectetur lacus ante</li>
-					<li>Vestibulum et massa dolor</li>
-					<li>Aenean condimentum blandit eros non dapibus</li>
-					<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-					<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-					<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-				</ul>
-
-			</div>
 		</section>
 	</div>
 </body>
