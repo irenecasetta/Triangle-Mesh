@@ -52,6 +52,7 @@ section {
 
 .titolo-sezione {
 	margin-right: 0em;
+	color: #EF6060;
 }
 
 .contenitore {
@@ -63,31 +64,34 @@ ul {
 	padding: 0;
 }
 
-button{
+#delaunay{
 	background-color: transparent;
-	border: none;
-	position: absolute;
 	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	color: #EF6060;
 	top: 48px;
-	right: 25px;
-
-
+	right: 10px;
+	position:absolute
 }
 
-.button{
+#voronoi{
 	background-color: transparent;
-	border: none;
-	position: absolute;
+	position:absolute;
 	font-size: 15px;
-	top: 0px;
-	right: 80px;
-
-
+	font-weight: 600;
+	border: none;
+	color: #EF6060;
+	top: 48px;
+	right: 100px;
 }
+
+
+
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 	header,
 	section {
 		grid-template-columns: 1fr;
@@ -104,9 +108,16 @@ button{
 	img {
 		width: 100%;
 	}
-	button{
-		width:30%;
-		top:60px;
+	#delaunay{
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	#voronoi{
+		font-size:12px;
+		right: 10px;
+		top: 34px;
+		font-weight: 500;
 	}
 	
 }
