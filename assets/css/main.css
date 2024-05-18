@@ -63,27 +63,8 @@ ul {
 	padding: 0;
 }
 
-button{
-	background-color: transparent;
-	border: none;
-	position: absolute;
-	font-size: 15px;
-	top: 48px;
-	right: 25px;
 
 
-}
-
-.button{
-	background-color: transparent;
-	border: none;
-	position: absolute;
-	font-size: 15px;
-	top: 0px;
-	right: 80px;
-
-
-}
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
@@ -103,10 +84,6 @@ button{
 	}
 	img {
 		width: 100%;
-	}
-	button{
-		width:30%;
-		top:60px;
 	}
 	
 }
