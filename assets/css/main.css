@@ -109,11 +109,13 @@ ul {
 		width: 100%;
 	}
 	#delaunay{
+		width:window;
 		font-size: 12px;
 		font-weight: 500;
 	}
 
 	#voronoi{
+		width:window;
 		font-size:12px;
 		right: 10px;
 		top: 34px;
