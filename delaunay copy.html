@@ -29,21 +29,15 @@
 			<h4 class="titolo-sezione">Nozioni di base</h4>
 			<div class="contenuto-sezione">
 				<p>
-					Il principio del diagramma di Voronoi ha stretta correlazione con la Triangolazione di Delaunay.  Il centro del cerchio circoscritto dei triangoli di Delaunay sono i vertici del diagramma di Voronoi. 
+					Il principio del diagramma di Voronoi ha stretta correlazione con la <b>Triangolazione di Delaunay.</b>  Il <b>centro del cerchio circoscritto</b> dei triangoli di Delaunay sono i <b>vertici </b>del diagramma di Voronoi. 
 
 				</p>
 				////////DIAGRAMMA VORONOI VETTORIALEEEEEEEEEEE
 				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
 				<p>
-				Considerazioni Triangolo:
-				definito da tre vertici
-				definito nel medesimo piano contenente gli stessi vertici
-				il vettore normale al piano è la normale del triangolo
-
-
-				Triangle meshes: 
-				Triangoli disposti nello spazio tridimensionale che sono collegati attraverso vertici e spigoli per formare una superficie modellabile
-				Dal punto di vista geometrico, una mesh è una superficie planare, quasi interamente; eccezione per i bordi, dove inevitabilmente i triangoli si uniscono e creano irregolarità. In questo caso le irregolarità date dalle congiunzioni vengono corrette visivamente in modo tale da ottenere una superficie quanto più liscia possibile.
+					Nel caso 2D, i <b>vertici di Voronoi </b>sono collegati tramite <b>spigoli,</b> che possono essere derivati dalle relazioni adiacenti dei triangoli di Delaunay: <p>se due triangoli condividono uno spigolo nella triangolazione di Delaunay, i loro circum centri devono essere collegati con uno spigolo nella tassellazione di Voronoi.</p>
+					I diagrammi di Voronoi scompongono lo spazio in celle a seconda di punti centrali specifici. In questo caso, le celle sono progettate geometricamente in modo che la distanza tra tutti i punti all'interno della cella al proprio punto centrale è più breve rispetto al centro delle celle adiacenti. Il bordo di ciascuna cella è sempre alla stessa distanza dai due punti vicini. 
+					
 				</p>
 			</div>
 		</section>
@@ -51,127 +45,57 @@
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 2:<br>Trigonometria</h4>
+			<h4 class="titolo-sezione">Formula<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					Sia S un insieme di punti nel piano, che chiamiamo siti. 
+Ad ogni sito P e' associata una regione di Voronoi R, definita come la parte di piano che e' piu' vicina a P che a qualsiasi altro punto di S. 
+L'insieme dei siti e delle loro regioni costituisce il diagramma di Voronoi.
+
 				</p>
+				/////IMMAGINE DELLA FORMULA
 				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/classe_vettori/"></iframe>
+				<p>
+					Alcune proprieta':</p>
+					<p></p>
+					Per ogni sito P, la corrispondente regione di Voronoi e' un poligono contenente P al suo interno.</p>
+					<p>
+					Il lato di confine fra due regioni di Voronoi, associate a due siti P1 e P2, e' un tratto dell'asse del segmento P1-P2 (l'asse e' la retta perpendicolare al segmento nel punto medio di questo).</p>
+					<p>
+					
+					Le regioni del diagramma di Voronoi ricoprono tutto il piano senza intersecarsi fra loro e senza lasciare "buchi".
+					Ogni volta che tre linee si incontrano, otteniamo un nuovo vertice, lontano secondo distanze identiche ai punti più vicini.
+					
+				</p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 3:<br>Linea tratteggiata</h4>
+			<h4 class="titolo-sezione">L’algoritmo di Lloyd
+				<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
+					L’algoritmo di Lloyd, noto anche come iterazione di Voronoi, è un algoritmo che trova insiemi di punti equidistanti in sottoinsiemi di spazi euclidei e partizioni di questi sottoinsiemi in celle. Questo algoritmo trova ripetutamente il baricentro di ciascun insieme nella partizione e quindi ripartiziona l'insieme dei punti in base a quale di questi baricentri è più vicino. 
+L'algoritmo può essere applicato nello smussamento delle mesh triangolari. 
+Descrizione
+L'algoritmo di Lloyd inizia con un posizionamento iniziale di un certo numero k di siti nel dominio di input. Quindi viene eseguita ripetutamente la seguente fase di rilassamento:
+Viene calcolato il diagramma di Voronoi dei k siti.
+Ogni cella del diagramma di Voronoi è integrata e viene calcolato il baricentro.
+Ogni sito viene quindi spostato al baricentro della sua cella di Voronoi.
+Poiché gli algoritmi per la costruzione dei diagrammi di Voronoi possono essere altamente complessi, i passaggi per calcolarli e trovare i baricentri esatti delle celle possono essere sostituiti da un'approssimazione.
+
 				</p>
 				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
 			</div>
 		</section>
 
-		<!-- --------------------------------------------------------------------- -->
+		
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 4:<br>Spirograph</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/spirograph/"></iframe>
 
-			</div>
-		</section>
 
-<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 5:<br> Radianti (GIF)</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif">
-			</div>
-		</section>
-
-<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
-			<h4 class="titolo-sezione">Bibliografia</h4>
-			<div class="contenuto-sezione">
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-					<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
-					<li>In cursus aliquam odio eu eleifend</li>
-					<li>Ut sed auctor magna</li>
-					<li>In hac habitasse platea dictumst</li>
-					<li>Aliquam aliquam nisl mi</li>
-					<li>Phasellus et orci elit</li>
-					<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-					<li>Nam consectetur lacus ante</li>
-					<li>Vestibulum et massa dolor</li>
-					<li>Aenean condimentum blandit eros non dapibus</li>
-					<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-					<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-					<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-				</ul>
-
-			</div>
 		</section>
 	</div>
 </body>
