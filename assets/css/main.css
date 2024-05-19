@@ -91,7 +91,7 @@ ul {
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1080px) {
 	header,
 	section {
 		grid-template-columns: 1fr;
@@ -109,15 +109,31 @@ ul {
 		width: 100%;
 	}
 	#delaunay{
+		width:window;
 		font-size: 12px;
 		font-weight: 500;
+		right: 2%;
+		margin-top: 20px;
+		top: 8%;
 	}
 
 	#voronoi{
+		margin-top: 20px;
+		width:window;
 		font-size:12px;
-		right: 10px;
-		top: 34px;
+		right: 2%;
 		font-weight: 500;
+		top: 10%;
+	}
+
+	h1{
+		font-size: 50px;
+		max-width: 30%;
+		line-height: 35pt;
+	}
+
+	p{
+		margin-right:20px;
 	}
 	
 }
