@@ -2,7 +2,7 @@ let points = [];
 let triangles = [];
 
 function setup() { 
-  createCanvas(800, 400);
+  createCanvas(600, 600);
   for(let i=0;i<40;i++) {
   points.push([random(width), random(height)]);
   }
