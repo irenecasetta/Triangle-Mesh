@@ -72,24 +72,28 @@
 					Elementi che compongono una mesh: 
 					</p>
 					<p>
+<<<<<<< HEAD
 				<b>Vertice: </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
+=======
+				<b>01.  Vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
+>>>>>>> 32508d0976f7ef05fa444d2fc2d6d21a23dfc110
 				</p>
 				<p>
-				<b>lato (edge)</b> connessione tra due vertici;
+				<b>02.  Lato (edge)</b> connessione tra due vertici;
 					</p>
 					<p>
-					<b>Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
+					<b>03.  Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
 				</p>
 				<p>
-					<b>Spigoli (Edges):</b> Gli spigoli sono i bordi che collegano due vertici. Ogni spigolo appartiene a una o più facce.
+					<b>04.  Spigoli (Edges):</b> Gli spigoli sono i bordi che collegano due vertici. Ogni spigolo appartiene a una o più facce.
 				</p>
 				<p>
-					<b>Texture Mapping:</b> Le mesh poligonali possono essere "mappate" con texture per aggiungere dettagli visivi. Ciò comporta la proiezione di una texture 2D su una superficie 3D in base alle coordinate della mappa UV. Un esempio concreto può essere il mappamondo sferico e l’atlante bidimensionale. 
+					<b>05.  Texture Mapping:</b> Le mesh poligonali possono essere "mappate" con texture per aggiungere dettagli visivi. Ciò comporta la proiezione di una texture 2D su una superficie 3D in base alle coordinate della mappa UV. Un esempio concreto può essere il mappamondo sferico e l’atlante bidimensionale. 
 				</p>
 				<p>
-					<b>Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
+					<b>06.  Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
 					</p>
-					<img  src= "assets/img/strips.png" width="600" vspace="5" hspace="width/2"
+					<img  src= "assets/img/strips.png" width="600" vspace="5" hspace="width/2">
 			</div>
 		</section>
 
@@ -99,17 +103,17 @@
 			<h4 class="titolo-sezione">Il vettore "normale"<br></h4>
 			<div class="contenuto-sezione">
 				<p>
-					Ogni <b>mesh-face</b> presenta un <b>lato anteriore</b> ed un <b>lato posteriore.</b> <p> Il <b>vettore perpendicolare</b> rispetto ad una face è definito <b>“normale”</b> alla face. La normale viene utilizzata per determinare l’angolo di riflessione dei raggi luminosi che colpiscono la superficie della mesh-face. In questa situazione valgono le proprietà di riflessione dei raggi, un raggio incidente sarà uguale per ampiezza al raggio riflesso.
+					Ogni <b>mesh-face</b> presenta un <b>lato anteriore</b> ed un <b>lato posteriore.</b> <p> Il <b>vettore perpendicolare</b> rispetto ad una face è definito <b>“normale”</b>. La normale viene utilizzata per determinare l’angolo di riflessione dei raggi luminosi che colpiscono la superficie della mesh-face. In questa situazione valgono le proprietà di riflessione dei raggi, un raggio incidente sarà uguale per ampiezza al raggio riflesso.
 </p>
 <p>
-					Il <b>vertice</b> ha anche una normale rivolta nella direzione determinata dalla<b> media tra le direzioni delle normali delle superfici</b> a cui appartiene il vertice.</p> 
+					Il <b> singolo vertice</b> ha anche una normale rivolta nella direzione determinata dalla<b> media tra le direzioni delle normali delle superfici</b> a cui appartiene il vertice stesso.</p> 
 
 	
 				<img src = "assets/img/vettori direzione.png" width="600" vspace="-700" hspace="width/2"> </p>
 				
-				<img src ="assets/img/Screenshot 2024-05-18 alle 22.54.09.png" width="250" vspace="-100" hspace="width/2">
-<p> Formula per calcolare la <b>normale</b> di un triangolo, esplicitati i suoi punti.</p>
 				
+<p> Formula per calcolare la <b>normale</b> di un triangolo, esplicitati i suoi punti.</p>
+		<img src ="assets/img/Screenshot 2024-05-18 alle 22.54.09.png" width="250" vspace="height/2" hspace="width/2">		
 			</div>
 		</section>
 
@@ -120,6 +124,10 @@
 			<div class="contenuto-sezione">
 				<p>
 					La mesh può essere definita <b>Manifold</b> dal momento in cui ciascun spigolo condivide un <b>massimo di 2 facce; </b>
+					</p>
+					<p>
+						Questo è un esempio di una mesh non-Manifold:
+					</p>
 
 				</p>
 <p>
@@ -135,7 +143,7 @@
 			<h4 class="titolo-sezione">Relazione di Eulero<br>Manifold Closed-meshes</h4>
 			<div class="contenuto-sezione">
 				<p>
-					In matematica, e più precisamente in geometria e topologia, la caratteristica di Eulero è un numero intero invariante che descrive alcuni aspetti della forma di uno spazio topologico. 
+					In matematica, e più precisamente in <b>geometria e topologia,</b> la <b>caratteristica di Eulero</b> è un numero intero invariante che descrive alcuni aspetti della forma di uno spazio topologico. 
 					</p>
 					<p>
                      Si denota comunemente con 𝒳. </p>
@@ -144,12 +152,14 @@
 				<img src = "assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"p>
  
 </p>
-</p>				 
+</p>
+<b>	
+	<p>		 
 V = vertici</p>
 <p>
 E = spigoli</p>
-
-F = facce
+<p>
+F = facce</b>	
 </p>
 <p>
 	<img src = "assets/img/cubo.png" width="300" vspace="heigth/2" hspace="width/2"p>
