@@ -15,21 +15,11 @@
 		<!-- --------------------------------------------------------------------- -->
 <div>
 <body class="page">
-	<section class="container">
-
-		<iframe scrolling=no frameborder=0 width=700% height=100%  src="assets/sketches/texture iniziale"></iframe>
-
-	</body>
-		<p class="special">
-			
-		</p>
-		
-	</section>
+	<section class="container"></section>
 	</body>
 </div>
 
 		<!-- --------------------------------------------------------------------- -->
-
 
 <div>
 	<a href="delaunay.html">
@@ -45,15 +35,15 @@
 		<span></span>
 		<h1>Triangle Mesh.</h1>
 	</header>
-	</div>
+</div>
 	
-	<!-- --------------------------------------------------------------------- -->
+		<!-- --------------------------------------------------------------------- -->
 
 	<section>
 			<h4 class="titolo-sezione">01. <br> Nozioni di base</h4>
 			<div class="contenuto-sezione">
 				<p>
-				Nell’a a b cmbito della <b>computer grafica 3D</b> e nella modellazione di solidi, la “mesh poligonale”, è un insieme di vertici, spigoli e facce che definiscono la forma di un <b>oggetto poliedrico</b>.<br>
+				Nell’ambito della <b>computer grafica 3D</b> e nella modellazione di solidi, la “mesh poligonale”, è un insieme di vertici, spigoli e facce che definiscono la forma di un <b>oggetto poliedrico</b>.<br>
 				Le facce consistono in rettangoli, triangoli o altri semplici poligoni. <br>
 				Solitamente le mesh rappresentano esplicitamente solo la <b>superficie</b> (il <b>volume è implicito</b>, l’interno della forma creata è vuoto, la funzione delle mesh perciò è solamente quella di rappresentare la superficie esterna).
 				</p>
@@ -65,29 +55,23 @@
 				<b>Mesh</b> composte da <b>poligoni arbitrari</b><br>
 				</p>
 				
-				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
-				<p>
+				<p><iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe></p>
 				<p>
 				Nello specifico la <b>“triangle mesh”</b> è costituita da un insieme di triangoli collegati fra loro attraverso <b>spigoli e vertici comuni</b>.<br> 
 				Il termine mesh in inglese significa letteralmente "maglia", "rete".
 				</p>
 				<p>
 					Elementi che compongono una mesh: 
-					</p>
-					<p>
-<<<<<<< HEAD
-				<b>01.  Vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
-=======
-				<b>Vertice: </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
-
-				<b>01.  Vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
-
->>>>>>> abffdb944f28cf8c7b01673a0a99d82f950851d3
 				</p>
 				<p>
-				<b>02.  Lato (edge)</b> connessione tra due vertici;
-					</p>
-					<p>
+					<b>Vertice: </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
+
+					<b>01.  Vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
+				</p>
+				<p>
+					<b>02.  Lato (edge)</b> connessione tra due vertici;
+				</p>
+				<p>
 					<b>03.  Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
 				</p>
 				<p>
@@ -98,88 +82,69 @@
 				</p>
 				<p>
 					<b>06.  Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
-					</p>
-					<img  src= "assets/img/strips.png" width="600" vspace="5" hspace="width/2">
+				</p>
+				<img  src= "assets/img/strips.png" width="600" vspace="5" hspace="width/2" style="padding-top: 10px ;">
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
+		<section>
 			<h4 class="titolo-sezione">02.<br>Il vettore "normale"</h4>
 			<div class="contenuto-sezione">
 				<p>
 					Ogni <b>mesh-face</b> presenta un <b>lato anteriore</b> ed un <b>lato posteriore.</b> <p> Il <b>vettore perpendicolare</b> rispetto ad una face è definito <b>“normale”</b>. La normale viene utilizzata per determinare l’angolo di riflessione dei raggi luminosi che colpiscono la superficie della mesh-face. In questa situazione valgono le proprietà di riflessione dei raggi, un raggio incidente sarà uguale per ampiezza al raggio riflesso.
-</p>
-<p>
-					Il <b> singolo vertice</b> ha anche una normale rivolta nella direzione determinata dalla<b> media tra le direzioni delle normali delle superfici</b> a cui appartiene il vertice stesso.</p> 
-
-	
-				<img src = "assets/img/vettori direzione.png" width="600" vspace="-700" hspace="width/2"> </p>
-				
-				
-<p> Formula per calcolare la <b>normale</b> di un triangolo, esplicitati i suoi punti.</p>
-		<img src ="assets/img/Screenshot 2024-05-18 alle 22.54.09.png" width="250" vspace="height/2" hspace="width/2">		
+				</p>
+				<p>
+					Il <b> singolo vertice</b> ha anche una normale rivolta nella direzione determinata dalla<b> media tra le direzioni delle normali delle superfici</b> a cui appartiene il vertice stesso.
+				</p> 
+				<p><img src = "assets/img/vettori direzione.png" width="600" vspace="-700" hspace="width/2"> </p>
+				<p> 
+					Formula per calcolare la <b>normale</b> di un triangolo, esplicitati i suoi punti.
+				</p>
+				<p><img src ="assets/img/Screenshot 2024-05-18 alle 22.54.09.png" width="250" vspace="height/2" hspace="width/2"></p>		
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
+		<section>
 			<h4 class="titolo-sezione">03. <br>Manifold-Meshes<br></h4>
 			<div class="contenuto-sezione">
 				<p>
 					La mesh può essere definita <b>Manifold</b> dal momento in cui ciascun spigolo condivide un <b>massimo di 2 facce; </b>
-					</p>
-					<p>
-						Questo è un esempio di una mesh non-Manifold:
-					</p>
-
 				</p>
-<p>
-				<img src = "assets/img/non-manifold.png"width="400" vspace="heigth/2" hspace="width/2"p>
-
+				<p>
+					Questo è un esempio di una mesh non-Manifold:
 				</p>
+				<p><img src = "assets/img/non-manifold.png"width="400" vspace="heigth/2" hspace="width/2"></p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
+		<section>
 			<h4 class="titolo-sezione">04.<br>Relazione di Eulero<br></h4>
 			<div class="contenuto-sezione">
 				<p>
 					In matematica, e più precisamente in <b>geometria e topologia,</b> la <b>caratteristica di Eulero</b> è un numero intero invariante che descrive alcuni aspetti della forma di uno spazio topologico. 
-					</p>
-					<p>
-                     Si denota comunemente con 𝒳. </p>
-
-</p> <p>
-				<img src = "assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"p>
- 
-</p>
-</p>
-<b>	
-	<p>		 
-V = vertici</p>
-<p>
-E = spigoli</p>
-<p>
-F = facce</b>	
-</p>
-<p>
-	<img src = "assets/img/cubo.png" width="300" vspace="heigth/2" hspace="width/2"p>
-</p>
-
-
+				</p>
+				<p>
+                     Si denota comunemente con 𝒳 
+				</p>
+				<p><img src = "assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"></p>
+				<p><b>	
+ 					V = vertici
+					E = spigoli
+					F = facce
+					</b>	
+				</p>
+				<p><img src = "assets/img/cubo.png" width="300" vspace="heigth/2" hspace="width/2"></p>
 			</div>
 		</section>
 
+		<!-- --------------------------------------------------------------------- -->
 
-
-<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
+		<section>
 			<h4 class="titolo-sezione">05.<br>Bibliografia</h4>
 			<div class="contenuto-sezione">
 				<ul>

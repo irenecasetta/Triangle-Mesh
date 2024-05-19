@@ -31,44 +31,42 @@
 				<p>
 					La triangolazione prende il nome da <b>Boris Delaunay</b> per il suo lavoro su di essa dal 1934.
 					<b>Questo criterio viene  utilizzato nella creazione di meshes triangolari dato un numero di punti disposti arbitrariamente nello spazio. </b>
-					L’obiettivo è proprio quello di creare una superficie formata da triangoli di punti contigui vicini. </p>
-					<p>Le intersezioni dei punti vengono collegate tramite una <b>rete di triangoli non sovrapposti </b>ed il più possibile compatti, fondamentale è che nessun punto cada all’interno di alcun <b>circumcerchio. </b>
-					</p>
-					<p>
-					NB: Il circumcerchio è la circonferenza circoscritta a un triangolo, ovvero l'unica circonferenza passante per tutti i suoi tre vertici, il cui centro è detto circocentro e il raggio circumraggio.
-					
+					L’obiettivo è proprio quello di creare una superficie formata da triangoli di punti contigui vicini. 
 				</p>
-			Clicca per creare tre vertici di un triangolo con corrispettiva circonferenza:
-
-				<iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/circumcerchio."></iframe>
 				<p>
-					E’ chiaro che il cerchio svolge un ruolo chiave nel <b>criterio di tassellazione di Delaunay,</b> una triangolazione basata su questo criterio è considerabile ottimale dal momento in cui: </p>
-					<p>
-- Tutti i triangoli formati dalla maglia sono <b>non degenerati.</b> Cioè, nessun insieme di tre punti collineari è collegato insieme in un unico triangolo.
-
-</p>
-<p>- Tutti i triangoli nella maglia producono un <b>circumcerchio che non contiene altri vertici</b> della mesh ad eccezione dei tre vertici che definiscono il triangolo.
-Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.</p>
-				
-			
-					<p><iframe scrolling=no frameborder=0 width=700 height=500 src="assets/sketches/delaunay interattivo"></iframe></p>
-				
+					Le intersezioni dei punti vengono collegate tramite una <b>rete di triangoli non sovrapposti </b>ed il più possibile compatti, fondamentale è che nessun punto cada all’interno di alcun <b>circumcerchio. </b>
+				</p>
+				<p>
+					NB: Il circumcerchio è la circonferenza circoscritta a un triangolo, ovvero l'unica circonferenza passante per tutti i suoi tre vertici, il cui centro è detto circocentro e il raggio circumraggio.
+				</p>
+				<br>
+				<p>
+					Clicca per creare tre vertici di un triangolo con corrispettiva circonferenza:
+				</p>
+				<p><iframe scrolling=no frameborder=0 width=100% height=600 src="assets/sketches/circumcerchio."></iframe></p>
+				<p>
+					E’ chiaro che il cerchio svolge un ruolo chiave nel <b>criterio di tassellazione di Delaunay,</b> una triangolazione basata su questo criterio è considerabile ottimale dal momento in cui: 
+				</p>
+				<p>
+					Tutti i triangoli formati dalla maglia sono <b>non degenerati.</b> Cioè, nessun insieme di tre punti collineari è collegato insieme in un unico triangolo.
+				</p>
+				<p>
+					Tutti i triangoli nella maglia producono un <b>circumcerchio che non contiene altri vertici</b> della mesh ad eccezione dei tre vertici che definiscono il triangolo.
+					Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.
+				</p>
+				<p><iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/delaunay interattivo"></iframe></p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
+		<section>
 			<h4 class="titolo-sezione">02. <br>Esempio pratico<br></h4>
 			<div class="contenuto-sezione">
 				<p>
 					Il <b>triangolo ABC</b> viene inscritto all’interno di un <b>circumcerchio,</b> se poniamo il <b>vertice D</b> esternamente alla circonferenza collegando ulteriormente i vertici per aggiungere il <b>triangolo CBD,</b> la rete risultante apparirà ottimale dal punto di vista del <b>criterio di Delaunay.</b>  
-
 				</p>
-				<p>
-				<img src ="assets/img/esempio1 delaunay.png" width="600" vspace="heigth/2" hspace="50"p>
-				
-				</p>
+				<p><img src ="assets/img/esempio1 delaunay.png" width="600" style="align-items: center"></p>
 			
 				<p>
 
@@ -76,73 +74,50 @@ Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale l
 
 				</p>
 				<p>
-				<img src ="assets/img/TRIANGOLI DELAUNAY 2.png" width="600" vspace="heigth/2" hspace="width/2"p>
-			</p>
+				<img src ="assets/img/TRIANGOLI DELAUNAY 2.png" width="600" style="align-items: center"></p>
+				<p>
+				<b>	Ripristino dell’ottimalità di Delaunay </b>
 				</p>
-<p>
-	
-<b>Ripristino dell’ottimalità di Delaunay </b></p>
-<p>
-In che modo possiamo correggere la suddivisione secondo il criterio? Infrangere il collegamento tra i vertici CB e creare un segmento AD. Ora il vertice C non coincide con la circonferenza del triangolo ABD ed il vertice B non coincide con il circumcerchio del triangolo CAD.
-
-
-
-</p>
-<p>
-<img src ="assets/img/TRIANGOLI3.png" width="600" vspace="heigth/2" hspace="50"p> </p>
-<p>
-	L'operazione che commuta il bordo comune tra due triangoli adiacenti è talvolta chiamata <b>"flip".</b>
-Quando un vertice viene inserito nella triangolazione, è possibile che questo si collochi all’interno di una circonferenza, in questi casi sarà necessaria la modifica delle forme preesistenti. Si crea così una <b>nuova struttura che rispetta il criterio di Delaunay. </b>
-
-
-
-</p>
-<p><img src ="assets/img/DELAUNAY TRE ESEMPI.png"> </p>
+				<p>
+					In che modo possiamo correggere la suddivisione secondo il criterio? Infrangere il collegamento tra i vertici CB e creare un segmento AD. Ora il vertice C non coincide con la circonferenza del triangolo ABD ed il vertice B non coincide con il circumcerchio del triangolo CAD.
+				</p>
+				<p><img src ="assets/img/TRIANGOLI3.png" width="600" style="align-items: center"></p>
+				<p>
+					L'operazione che commuta il bordo comune tra due triangoli adiacenti è talvolta chiamata <b>"flip".</b>
+					Quando un vertice viene inserito nella triangolazione, è possibile che questo si collochi all’interno di una circonferenza, in questi casi sarà necessaria la modifica delle forme preesistenti. Si crea così una <b>nuova struttura che rispetta il criterio di Delaunay. </b>
+				</p>
+				<p><img src ="assets/img/DELAUNAY TRE ESEMPI.png"></p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">04.<br>Algoritmi nella Triangolazione Delaunay<br></h4>
+		<section>
+			<h4 class="titolo-sezione">03.<br>Algoritmi nella <br> Triangolazione Delaunay<br></h4>
 			<div class="contenuto-sezione">
 				<p>
 					<b>1. Incrementale </b>
-					</p>
-					<p>
- I punti vengono aggiunti uno ad uno ed ad ogni passo le proprietà della triangolazione di Delaunay vengono mantenute. Dal momento in cui vengono aggiunti punti, questi una volta congiunti ai vertici dei triangoli adiacenti devono soddisfare i requisiti. 
-
+				</p>
+				<p>
+ 					I punti vengono aggiunti uno ad uno ed ad ogni passo le proprietà della triangolazione di Delaunay vengono mantenute. Dal momento in cui vengono aggiunti punti, questi una volta congiunti ai vertici dei triangoli adiacenti devono soddisfare i requisiti. 
 				</p>
 				<p>
 					<b>2. Dividi et impera-Algoritmo DeWall</b>
-					</p><p>
-					- Dopo aver stabilito il piano α, si costruisce il primo triangolo
-					</p>
-<p>
-- partendo dalla faccia ( lato in 2d) che interseca α si costruisce il triangolo successivo scegliendo il punto, dall’altra parte di α, che minimizza il raggio della circonferenza circoscritta.
-<p>
-- Applicare ricorsivamente l’algoritmo a S+ e S-.</p> 
-<p>
-- Restituire l’unione dei tre.</p>
-
-
-	<iframe scrolling=no frameborder=0 width=80% height=500 src="assets/sketches/delaunay motion"></iframe>
-	
-
-
-
-
-
 				</p>
-				
-		</section>
-
-		
-
-
-
-
-		</section>
-	</div>
-</body>
+				<p>
+					Dopo aver stabilito il piano α, si costruisce il primo triangolo
+				</p>
+				<p>
+					partendo dalla faccia ( lato in 2d) che interseca α si costruisce il triangolo successivo scegliendo il punto, dall’altra parte di α, che minimizza il raggio della circonferenza circoscritta.
+				</p>
+				<p>
+					Applicare ricorsivamente l’algoritmo a S+ e S-.
+				</p> 
+				<p>
+					Restituire l’unione dei tre.
+				</p>
+				<p><iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/delaunay motion"></iframe></p>
+			</section>
+		</div>
+	</body>
 </html>

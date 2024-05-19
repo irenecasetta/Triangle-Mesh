@@ -1,7 +1,7 @@
 let points = [];
 
 function setup() {
-  createCanvas(640, 360);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function mousePressed() {

@@ -3,7 +3,8 @@ let points = [];
 let delaunay, voronoi;
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(windowWidth, windowHeight);
+  
   for (let i = 0; i < 100; i++) {
     let x = random(width/2);
     let y = random(height/2);
