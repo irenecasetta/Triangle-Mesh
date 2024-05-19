@@ -81,7 +81,6 @@ ul {
 	background-color: #EF6060;
 	margin: 0;
 	padding: 0;
-	display:block;
 }
 
 #delaunay{
@@ -113,4 +112,54 @@ ul {
 	padding: 0;
 	margin:0;
 }
+
+@media only screen and (max-width: 1080px) {
+	header,
+	section {
+		grid-template-columns: 1fr;
+	}
+	.contenitore {
+		width:100%;
+	}
+	.contenuto-sezione {
+		width: 100%;
+	}
+	.titolo-sezione {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+	#delaunay{
+		width: window;
+		font-size: 12px;
+		font-weight: 500;
+		right: 2%;
+		top: 19%;
+		position: relative;
+		float: right;
+	}
+
+	#voronoi{
+		width:window;
+		font-size:12px;
+		font-weight: 500;
+		right: 2%;
+		top: 22%;
+		position: relative;
+		float: right;
+	}
+
+	h1{
+		font-size: 50px;
+		max-width: 30%;
+		line-height: 35pt;
+	}
+
+	p{
+		margin-right:20px;
+	}
+	
+}
+ 
 
