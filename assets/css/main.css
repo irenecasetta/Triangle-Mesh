@@ -27,7 +27,8 @@ p {
 
 h1 {
 	margin: 0;
-	font-size: 3em;
+	font-size: 50px;
+	padding-top: 50px;
 }
 
 h4 {
@@ -84,75 +85,31 @@ ul {
 
 #delaunay{
 	background-color: transparent;
+	position:absolute;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	border: none;
 	color: #EF6060;
-	top: 48px;
-	right: 10px;
-	position:relative;
+	right: 100px;
+	padding-top: 86px;
+	float:right;
 	}
 
 
 #voronoi{
 	background-color: transparent;
-	position:relative;
+	position:absolute;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	border: none;
 	color: #EF6060;
-	top: 48px;
-	right: 100px;
+	right: 15px;
+	padding-top: 86px;
+	float: right;
 }
 
 .page{
 	padding: 0;
 	margin:0;
 }
-
-@media only screen and (max-width: 1080px) {
-	header,
-	section {
-		grid-template-columns: 1fr;
-	}
-	.contenitore {
-		width:100%;
-	}
-	.contenuto-sezione {
-		width: 100%;
-	}
-	.titolo-sezione {
-		width: 100%;
-	}
-	img {
-		width: 100%;
-	}
-	#delaunay{
-		width:window;
-		font-size: 12px;
-		font-weight: 500;
-		right: 2%;
-		top: 10%;
-	}
-
-	#voronoi{
-		width:window;
-		font-size:12px;
-		font-weight: 500;
-		right: 2%;
-		top: 12%;
-	}
-
-	h1{
-		font-size: 50px;
-		max-width: 30%;
-		line-height: 35pt;
-	}
-
-	p{
-		margin-right:20px;
-	}
-	
-}
- 
 
