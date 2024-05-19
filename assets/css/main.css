@@ -115,15 +115,14 @@ ul {
 }
 
 .titoloD{
-	margin-top: 100px;
+	margin-top: 50px;
 	padding-bottom:10px;
 }
 
 .special{
-	font-size: 300px;
-	color: #FDFCF2;
-	align-self: center;
-	display: block;
+	color: white;
+	padding-top:58%;
+	padding-left: 0%;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -169,6 +168,10 @@ ul {
 
 	p{
 		margin-right:20px;
+	}
+
+	.container{
+		width: 100%;
 	}
 	
 }
