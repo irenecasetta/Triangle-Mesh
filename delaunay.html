@@ -37,9 +37,9 @@
 					NB: Il circumcerchio è la circonferenza circoscritta a un triangolo, ovvero l'unica circonferenza passante per tutti i suoi tre vertici, il cui centro è detto circocentro e il raggio circumraggio.
 					
 				</p>
-			/////*	NOSTRO SKETCH INBTERATTIVO DEL TRIANGOLO CHE SI FORMA SCHIACCIANDO IL MOUSE E SCEGLIENDO I PUNTI)
+			Clicca per creare tre vertici di un triangolo con corrispettiva circonferenza:
 
-				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/sfera/"></iframe>
+				<iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/circumcerchio."></iframe>
 				<p>
 					E’ chiaro che il cerchio svolge un ruolo chiave nel <b>criterio di tassellazione di Delaunay,</b> una triangolazione basata su questo criterio è considerabile ottimale dal momento in cui: </p>
 					<p>
@@ -49,6 +49,9 @@
 <p>- Tutti i triangoli nella maglia producono un <b>circumcerchio che non contiene altri vertici</b> della mesh ad eccezione dei tre vertici che definiscono il triangolo.
 Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.
 
+				</p>
+				<p>
+					<iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/delaunay interattivo"></iframe>
 				</p>
 			</div>
 		</section>
@@ -62,15 +65,19 @@ Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale l
 					Il <b>triangolo ABC</b> viene inscritto all’interno di un <b>circumcerchio,</b> se poniamo il <b>vertice D</b> esternamente alla circonferenza collegando ulteriormente i vertici per aggiungere il <b>triangolo CBD,</b> la rete risultante apparirà ottimale dal punto di vista del <b>criterio di Delaunay.</b>  
 
 				</p>
-				////////IMMAGINE VETTORIALE TRIANGOLI VEDI DOCUMENTO GOOGLE, IMMAGINE DA DRIVE
-				<iframe scrolling=no frameborder=0 width=100% height=500 src="./assets/sketches/classe_vettori/"></iframe>
+				<p>
+				<img src ="assets/img/triangoli1.jpg" 
+				
+				</p>
 			
 				<p>
 
 					Se il <b>vertice D</b>  fosse posto all’interno del circumcerchio del <b>triangolo ABC,</b> la rete risultante non soddisferebbe i criteri di Delaunay, il vertice D sarebbe all'interno del cerchio per ABC, ma il <b>vertice A sarebbe all'interno del cerchio per il triangolo CBD.</b>
 
 				</p>
-				//////immagine vedi documento google, immagine da drive
+				<p>
+				<img src ="assets/img/tirangoli2.jpg" 
+				</p>
 <p>
 	
 <b>Ripristino dell’ottimalità di Delaunay </b>
@@ -79,7 +86,8 @@ In che modo possiamo correggere la suddivisione secondo il criterio? Infrangere 
 
 
 </p>
-/////IMMAGINE VEDI DOC GOOGLE
+<p>
+<img src ="assets/img/triangoli3.jpg" </p>
 <p>
 	L'operazione che commuta il bordo comune tra due triangoli adiacenti è talvolta chiamata <b>"flip".</b>
 Quando un vertice viene inserito nella triangolazione, è possibile che questo si collochi all’interno di una circonferenza, in questi casi sarà necessaria la modifica delle forme preesistenti. Si crea così una <b>nuova struttura che rispetta il criterio di Delaunay. </b>
@@ -87,6 +95,7 @@ Quando un vertice viene inserito nella triangolazione, è possibile che questo s
 
 
 </p>
+<p><img src ="assets/img/Delaunay.jpg" </p>
 			</div>
 		</section>
 
@@ -115,16 +124,15 @@ Quando un vertice viene inserito nella triangolazione, è possibile che questo s
 - Restituire l’unione dei tre.</p>
 
 <p> 
-
-	//////SKETCH CON TUTTI I TRIANGOLINI CHE SI MUOVONO
+	<iframe scrolling=no frameborder=0 width=500 height=500 src="assets/sketches/delaunay motion"></iframe>
+	
 </p>
 
 
 
 
 				</p>
-				<iframe scrolling=no frameborder=0 width=500 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
-			</div>
+				
 		</section>
 
 		
