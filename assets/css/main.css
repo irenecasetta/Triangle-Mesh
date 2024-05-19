@@ -27,8 +27,8 @@ p {
 
 h1 {
 	font-size: 50px;
-	padding-top: 50px;
-	margin-bottom: 0;
+	padding-top: 20px;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -57,7 +57,7 @@ section {
 .titolo-sezione {
 	margin-right: 0em;
 	margin-top: 5px;
-	margin-left: 10px;
+	margin-left: 20px;
 	color: #EF6060;
 }
 
@@ -86,12 +86,12 @@ ul {
 #delaunay{
 	background-color: transparent;
 	position:absolute;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 500;
 	border: none;
 	color: #EF6060;
 	right: 100px;
-	padding-top: 111px;
+	padding-top: 88px;
 	float:right;
 	}
 
@@ -99,18 +99,31 @@ ul {
 #voronoi{
 	background-color: transparent;
 	position:absolute;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 500;
 	border: none;
 	color: #EF6060;
 	right: 15px;
-	padding-top: 111px;
+	padding-top: 88px;
 	float: right;
 }
 
 .page{
 	padding: 0;
 	margin:0;
+	display: block;
+}
+
+.titoloD{
+	margin-top: 100px;
+	padding-bottom:10px;
+}
+
+.special{
+	font-size: 300px;
+	color: #FDFCF2;
+	align-self: center;
+	display: block;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -135,15 +148,15 @@ ul {
 	}
 	#delaunay{
 		width: window;
-		font-size: 12px;
-		top: 106%;
+		font-size: 15px;
+		top: 105%;
 		position:absolute;
 	}
 
 	#voronoi{
 		width:window;
-		font-size:12px;
-		top: 106%;
+		font-size:15px;
+		top: 105%;
 		position: absolute;
 	}
 
