@@ -27,7 +27,8 @@ p {
 
 h1 {
 	margin: 0;
-	font-size: 3em;
+	font-size: 50px;
+	padding-top: 50px;
 }
 
 h4 {
@@ -80,30 +81,31 @@ ul {
 	background-color: #EF6060;
 	margin: 0;
 	padding: 0;
-	display:block;
 }
 
 #delaunay{
 	background-color: transparent;
+	position:absolute;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	border: none;
 	color: #EF6060;
-	top: 48px;
-	right: 10px;
-	position:relative;
+	right: 100px;
+	padding-top: 86px;
+	float:right;
 	}
 
 
 #voronoi{
 	background-color: transparent;
-	position:relative;
+	position:absolute;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	border: none;
 	color: #EF6060;
-	top: 48px;
-	right: 100px;
+	right: 15px;
+	padding-top: 86px;
+	float: right;
 }
 
 .page{
@@ -129,11 +131,13 @@ ul {
 		width: 100%;
 	}
 	#delaunay{
-		width:window;
+		width: window;
 		font-size: 12px;
 		font-weight: 500;
 		right: 2%;
-		top: 10%;
+		top: 19%;
+		position: relative;
+		float: right;
 	}
 
 	#voronoi{
@@ -141,7 +145,9 @@ ul {
 		font-size:12px;
 		font-weight: 500;
 		right: 2%;
-		top: 12%;
+		top: 22%;
+		position: relative;
+		float: right;
 	}
 
 	h1{
