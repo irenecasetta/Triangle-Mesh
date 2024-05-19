@@ -80,6 +80,7 @@ ul {
 	background-color: #EF6060;
 	margin: 0;
 	padding: 0;
+	display:block;
 }
 
 #delaunay{
