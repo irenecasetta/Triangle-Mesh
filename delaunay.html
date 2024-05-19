@@ -31,7 +31,8 @@
 				<p>
 					La triangolazione prende il nome da <b>Boris Delaunay</b> per il suo lavoro su di essa dal 1934.
 					<b>Questo criterio viene  utilizzato nella creazione di meshes triangolari dato un numero di punti disposti arbitrariamente nello spazio. </b>
-					L’obiettivo è proprio quello di creare una superficie formata da triangoli di punti contigui vicini. Le intersezioni dei punti vengono collegate tramite una <b>rete di triangoli non sovrapposti </b>ed il più possibile compatti, fondamentale è che nessun punto cada all’interno di alcun <b>circumcerchio. </b>
+					L’obiettivo è proprio quello di creare una superficie formata da triangoli di punti contigui vicini. </p>
+					<p>Le intersezioni dei punti vengono collegate tramite una <b>rete di triangoli non sovrapposti </b>ed il più possibile compatti, fondamentale è che nessun punto cada all’interno di alcun <b>circumcerchio. </b>
 					</p>
 					<p>
 					NB: Il circumcerchio è la circonferenza circoscritta a un triangolo, ovvero l'unica circonferenza passante per tutti i suoi tre vertici, il cui centro è detto circocentro e il raggio circumraggio.
@@ -47,12 +48,11 @@
 
 </p>
 <p>- Tutti i triangoli nella maglia producono un <b>circumcerchio che non contiene altri vertici</b> della mesh ad eccezione dei tre vertici che definiscono il triangolo.
-Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.
-
-				</p>
-				<p>
-					<iframe scrolling=no frameborder=0 width=100% height=500% src="assets/sketches/delaunay interattivo"></iframe>
-				</p>
+Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale lato è minore di 180°.</p>
+				
+			
+					<p><iframe scrolling=no frameborder=0 width=100% height=500 src="assets/sketches/delaunay interattivo"></iframe></p>
+				
 			</div>
 		</section>
 
@@ -81,7 +81,8 @@ Nei triangoli che hanno un lato in comune la somma degli angoli opposti a tale l
 				</p>
 <p>
 	
-<b>Ripristino dell’ottimalità di Delaunay </b>
+<b>Ripristino dell’ottimalità di Delaunay </b></p>
+<p>
 In che modo possiamo correggere la suddivisione secondo il criterio? Infrangere il collegamento tra i vertici CB e creare un segmento AD. Ora il vertice C non coincide con la circonferenza del triangolo ABD ed il vertice B non coincide con il circumcerchio del triangolo CAD.
 
 
