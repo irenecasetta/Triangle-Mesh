@@ -22,6 +22,7 @@ p {
 	margin: 0 0 1em 0;
 	max-width: 35em;
 	font-size: 20px;
+	top: 0;
 }
 
 h1 {
@@ -53,6 +54,8 @@ section {
 
 .titolo-sezione {
 	margin-right: 0em;
+	margin-top: 5px;
+	margin-left: 10px;
 	color: #EF6060;
 }
 
@@ -65,33 +68,46 @@ ul {
 	padding: 0;
 }
 
+.contenuto-sezione{
+	color: black;
+	margin-top: 5px;
+}
+
+.container{
+	width: 100%;
+	height: 100vh;
+	background-color: #EF6060;
+	margin: 0;
+	padding: 0;
+}
+
 #delaunay{
 	background-color: transparent;
 	font-size: 15px;
 	font-weight: 600;
 	border: none;
 	color: #EF6060;
-	top: 0px;
+	top: 48px;
 	right: 10px;
-	position:absolute
+	position:relative;
 	}
 
 
 #voronoi{
 	background-color: transparent;
-	position:absolute;
+	position:relative;
 	font-size: 15px;
 	font-weight: 600;
 	border: none;
 	color: #EF6060;
-	top: 0px;
+	top: 48px;
 	right: 100px;
 }
 
-
-
-
-/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
+.page{
+	padding: 0;
+	margin:0;
+}
 
 @media only screen and (max-width: 1080px) {
 	header,
@@ -115,6 +131,7 @@ ul {
 		font-size: 12px;
 		font-weight: 500;
 		right: 2%;
+		top: 10%;
 	}
 
 	#voronoi{
@@ -122,6 +139,7 @@ ul {
 		font-size:12px;
 		font-weight: 500;
 		right: 2%;
+		top: 12%;
 	}
 
 	h1{
