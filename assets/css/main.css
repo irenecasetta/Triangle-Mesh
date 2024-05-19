@@ -20,7 +20,8 @@ b {
 
 p {
 	margin: 0 0 1em 0;
-	max-width: 40em;
+	max-width: 35em;
+	font-size: 20px;
 }
 
 h1 {
@@ -71,10 +72,11 @@ ul {
 	font-weight: 600;
 	border: none;
 	color: #EF6060;
-	top: 48px;
+	top: 0px;
 	right: 10px;
 	position:absolute
-}
+	}
+
 
 #voronoi{
 	background-color: transparent;
@@ -83,7 +85,7 @@ ul {
 	font-weight: 600;
 	border: none;
 	color: #EF6060;
-	top: 48px;
+	top: 0px;
 	right: 100px;
 }
 
@@ -114,17 +116,13 @@ ul {
 		font-size: 12px;
 		font-weight: 500;
 		right: 2%;
-		margin-top: 20px;
-		top: 8%;
 	}
 
 	#voronoi{
-		margin-top: 20px;
 		width:window;
 		font-size:12px;
-		right: 2%;
 		font-weight: 500;
-		top: 10%;
+		right: 2%;
 	}
 
 	h1{
@@ -138,3 +136,5 @@ ul {
 	}
 	
 }
+ 
+
