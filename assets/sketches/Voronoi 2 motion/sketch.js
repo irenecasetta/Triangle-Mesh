@@ -4,7 +4,7 @@ let velocities = [];
 let delaunay;
 
 function setup() {
-  createCanvas(500, 300);
+  createCanvas(1000, 900);
   for (let i = 0; i < 1000; i++) {
     seedPoints[i] = createVector(random(width), random(height));
     velocities[i] = p5.Vector.random2D().setMag(random(0.25, 1));
