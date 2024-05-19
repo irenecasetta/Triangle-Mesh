@@ -26,9 +26,9 @@ p {
 }
 
 h1 {
-	margin: 0;
 	font-size: 50px;
 	padding-top: 50px;
+	margin-bottom: 0;
 }
 
 h4 {
@@ -91,7 +91,7 @@ ul {
 	border: none;
 	color: #EF6060;
 	right: 100px;
-	padding-top: 86px;
+	padding-top: 111px;
 	float:right;
 	}
 
@@ -104,7 +104,7 @@ ul {
 	border: none;
 	color: #EF6060;
 	right: 15px;
-	padding-top: 86px;
+	padding-top: 111px;
 	float: right;
 }
 
@@ -123,9 +123,12 @@ ul {
 	}
 	.contenuto-sezione {
 		width: 100%;
+		margin-left: 3%;
+		padding-right:10%;
 	}
 	.titolo-sezione {
 		width: 100%;
+		margin-left: 3%;
 	}
 	img {
 		width: 100%;
@@ -133,27 +136,22 @@ ul {
 	#delaunay{
 		width: window;
 		font-size: 12px;
-		font-weight: 500;
-		right: 2%;
-		top: 19%;
-		position: relative;
-		float: right;
+		top: 106%;
+		position:absolute;
 	}
 
 	#voronoi{
 		width:window;
 		font-size:12px;
-		font-weight: 500;
-		right: 2%;
-		top: 22%;
-		position: relative;
-		float: right;
+		top: 106%;
+		position: absolute;
 	}
 
 	h1{
 		font-size: 50px;
 		max-width: 30%;
 		line-height: 35pt;
+		margin-left: 3%;
 	}
 
 	p{
