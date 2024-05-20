@@ -38,8 +38,8 @@
 				<img src="assets/img/DIAGRAMMA E TRIANG.png" style="padding-top: 10px; padding-bottom: 25px;">
 				
 				<p>
-					Nel caso bidimensionale, i <b>vertici di Voronoi </b>sono collegati tramite <b>spigoli</b>, che possono essere derivati dalle relazioni adiacenti dei triangoli di Delaunay: <p>se due triangoli condividono uno spigolo nella triangolazione di Delaunay, i loro circumcentri devono essere collegati con uno spigolo nella tassellazione di Voronoi.</p><p>
-					I diagrammi di Voronoi scompongono lo spazio in celle a seconda di punti centrali specifici. In questo caso, le celle sono progettate geometricamente in modo che la distanza tra tutti i punti all'interno della cella al proprio punto centrale è più breve rispetto al centro delle celle adiacenti. Il bordo di ciascuna cella è sempre alla stessa distanza dai due punti vicini. 
+					Nel caso bidimensionale, i <b>vertici di Voronoi </b>sono collegati tramite <b>spigoli</b>, che possono essere derivati dalle relazioni adiacenti dei triangoli di Delaunay: <p><b>se due triangoli condividono uno spigolo</b> nella triangolazione di Delaunay, i loro circumcentri devono essere collegati con uno spigolo nella tassellazione di Voronoi.</p><p>
+					I diagrammi di Voronoi scompongono lo spazio in <b>celle</b> a seconda di punti centrali specifici. In questo caso, le celle sono progettate geometricamente in modo che la distanza tra tutti i punti all'interno della cella al proprio punto centrale è più breve rispetto al centro delle celle adiacenti. Il bordo di ciascuna cella è sempre alla stessa distanza dai due punti vicini. 
 					
 				</p>
 				<p>
@@ -54,13 +54,16 @@
 			<h4 class="titolo-sezione">02. <br>Formula</h4>
 			<div class="contenuto-sezione">
 				<p>
-					Sia S un insieme di punti nel piano, che chiamiamo siti. 
-					Ad ogni sito P e' associata una regione di Voronoi R, definita come la parte di piano che e' piu' vicina a P che a qualsiasi altro punto di S. 
+					Sia S un insieme di punti nel piano, che chiamiamo sito. 
+					Ad ogni sito P è associata una regione di Voronoi R, definita come la parte di piano che è più vicina a P che a qualsiasi altro punto di S. 
 					L'insieme dei siti e delle loro regioni costituisce il diagramma di Voronoi.
+					<br>
+					<br>
+
+					Nel caso più semplice e comune, quello del piano, dato un insieme finito di punti S, il diagramma di Voronoi per S è la partizione del piano che associa una regione V(p) ad ogni punto 
+					p ∈ S in modo tale che tutti i punti all'interno del perimetro di V(p) siano più vicini a p che a ogni altro punto in S.
 
 				</p>
-				
-				<img src="assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"p>
 				<p>
 					Alcune proprietà:
 				</p>
