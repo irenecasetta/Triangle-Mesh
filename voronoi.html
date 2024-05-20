@@ -26,8 +26,8 @@
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Nozioni di base</h4>
+		<section>
+			<h4 class="titolo-sezione">01. <br>Principio di partenza</h4>
 			<div class="contenuto-sezione">
 				<p>
 					Il principio del diagramma di Voronoi ha stretta correlazione con la <b>Triangolazione di Delaunay.</b>  Il <b>centro del cerchio circoscritto</b> dei triangoli di Delaunay sono i <b>vertici </b>del diagramma di Voronoi. 
@@ -35,10 +35,10 @@
 					<p> <b>Triangolazione di Delaunay:</b> Trama suddivisa in triangoli.</p>
 					<p><b>Diagramma di Voronoi:</b> Trama suddivisa in poligoni. </p>
 				</p>
-				<img src="assets/img/DIAGRAMMA E TRIANG.png">
+				<img src="assets/img/DIAGRAMMA E TRIANG.png" style="padding-top: 10px; padding-bottom: 25px;">
 				
 				<p>
-					Nel caso 2D, i <b>vertici di Voronoi </b>sono collegati tramite <b>spigoli,</b> che possono essere derivati dalle relazioni adiacenti dei triangoli di Delaunay: <p>se due triangoli condividono uno spigolo nella triangolazione di Delaunay, i loro circumcentri devono essere collegati con uno spigolo nella tassellazione di Voronoi.</p><p>
+					Nel caso bidimensionale, i <b>vertici di Voronoi </b>sono collegati tramite <b>spigoli</b>, che possono essere derivati dalle relazioni adiacenti dei triangoli di Delaunay: <p>se due triangoli condividono uno spigolo nella triangolazione di Delaunay, i loro circumcentri devono essere collegati con uno spigolo nella tassellazione di Voronoi.</p><p>
 					I diagrammi di Voronoi scompongono lo spazio in celle a seconda di punti centrali specifici. In questo caso, le celle sono progettate geometricamente in modo che la distanza tra tutti i punti all'interno della cella al proprio punto centrale è più breve rispetto al centro delle celle adiacenti. Il bordo di ciascuna cella è sempre alla stessa distanza dai due punti vicini. 
 					
 				</p>
@@ -50,37 +50,37 @@
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Formula<br></h4>
+		<section>
+			<h4 class="titolo-sezione">02. <br>Formula</h4>
 			<div class="contenuto-sezione">
 				<p>
 					Sia S un insieme di punti nel piano, che chiamiamo siti. 
-Ad ogni sito P e' associata una regione di Voronoi R, definita come la parte di piano che e' piu' vicina a P che a qualsiasi altro punto di S. 
-L'insieme dei siti e delle loro regioni costituisce il diagramma di Voronoi.
+					Ad ogni sito P e' associata una regione di Voronoi R, definita come la parte di piano che e' piu' vicina a P che a qualsiasi altro punto di S. 
+					L'insieme dei siti e delle loro regioni costituisce il diagramma di Voronoi.
 
 				</p>
 				
 				<img src="assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"p>
 				<p>
-					Alcune proprietà:</p>
-					<p></p>
-					Per ogni sito P, la corrispondente regione di Voronoi e' un poligono contenente P al suo interno.</p>
-					<p>
-					Il lato di confine fra due regioni di Voronoi, associate a due siti P1 e P2, e' un tratto dell'asse del segmento P1-P2 (l'asse e' la retta perpendicolare al segmento nel punto medio di questo).</p>
-					<p>
-					
+					Alcune proprietà:
+				</p>
+				<p>
+					Per ogni sito P, la corrispondente regione di Voronoi e' un poligono contenente P al suo interno.
+				</p>
+				<p>
+					Il lato di confine fra due regioni di Voronoi, associate a due siti P1 e P2, e' un tratto dell'asse del segmento P1-P2 (l'asse e' la retta perpendicolare al segmento nel punto medio di questo).
+				</p>
+				<p>
 					Le regioni del diagramma di Voronoi ricoprono tutto il piano senza intersecarsi fra loro e senza lasciare "buchi".
 					Ogni volta che tre linee si incontrano, otteniamo un nuovo vertice, lontano secondo distanze identiche ai punti più vicini.
-					
 				</p>
 			</div>
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">L’algoritmo di Lloyd
-				<br></h4>
+		<section>
+			<h4 class="titolo-sezione">03. <br>L’algoritmo di Lloyd</h4>
 			<div class="contenuto-sezione">
 				<p>
 					L’algoritmo di Lloyd, noto anche come iterazione di Voronoi, è un algoritmo che trova insiemi di punti equidistanti in sottoinsiemi di spazi euclidei e partizioni di questi sottoinsiemi in celle. Questo algoritmo trova ripetutamente il baricentro di ciascun insieme nella partizione e quindi ripartiziona l'insieme dei punti in base a quale di questi baricentri è più vicino. 

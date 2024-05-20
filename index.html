@@ -14,9 +14,12 @@
 </head>
 		<!-- --------------------------------------------------------------------- -->
 <div>
-<body class="page">
-	<section class="container"></section>
-	</body>
+<body style="width: 100%; padding:0; margin:0; display:block;">
+	<section style="width: 100%; height: 100vh; background-color: #EF6060; margin: 0; padding: 0; display: block;">
+		<p id="isia">ISIA U</p>
+		<p id="titoloP"> Triangle Mesh.</p>
+	</section>
+</body>
 </div>
 
 		<!-- --------------------------------------------------------------------- -->
@@ -40,7 +43,7 @@
 		<!-- --------------------------------------------------------------------- -->
 
 	<section>
-			<h4 class="titolo-sezione">01. <br> Nozioni di base</h4>
+			<h4 class="titolo-sezione">01. <br> Teoria</h4>
 			<div class="contenuto-sezione">
 				<p>
 				Nell’ambito della <b>computer grafica 3D</b> e nella modellazione di solidi, la “mesh poligonale”, è un insieme di vertici, spigoli e facce che definiscono la forma di un <b>oggetto poliedrico</b>.<br>
@@ -64,24 +67,19 @@
 					Elementi che compongono una mesh: 
 				</p>
 				<p>
-					<b>Vertice: </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
-
-					<b>01.  Vertice; </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
+					<b>01. Vertice: </b>Ogni oggetto tridimensionale è composto da punti nello spazio chiamati vertici, ciascuno ha una posizione specifica definita dalle sue <b>coordinate x, y, z.</b>
 				</p>
 				<p>
-					<b>02.  Lato (edge)</b> connessione tra due vertici;
+					<b>02.  Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
 				</p>
 				<p>
-					<b>03.  Facce (Faces):</b> Le facce sono i poligoni che collegano i vertici per formare superfici. 
+					<b>03.  Spigoli (Edges):</b> Gli spigoli sono i bordi che collegano due vertici; ogni spigolo appartiene a una o più facce.
 				</p>
 				<p>
-					<b>04.  Spigoli (Edges):</b> Gli spigoli sono i bordi che collegano due vertici. Ogni spigolo appartiene a una o più facce.
+					<b>04.  Texture Mapping:</b> Le mesh poligonali possono essere "mappate" con texture per aggiungere dettagli visivi. Ciò comporta la proiezione di una texture 2D su una superficie 3D in base alle coordinate della mappa UV. Un esempio concreto può essere il mappamondo sferico e l’atlante bidimensionale. 
 				</p>
 				<p>
-					<b>05.  Texture Mapping:</b> Le mesh poligonali possono essere "mappate" con texture per aggiungere dettagli visivi. Ciò comporta la proiezione di una texture 2D su una superficie 3D in base alle coordinate della mappa UV. Un esempio concreto può essere il mappamondo sferico e l’atlante bidimensionale. 
-				</p>
-				<p>
-					<b>06.  Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
+					<b>05.  Fans e strips:</b> Una sequenza di triangoli adiacenti che condividono lo stesso vertice è detta fan (ventaglio) di triangoli. Una strip è una sequenza di triangoli che condividono determinati vertici, La quantità di vertici salvata incrementa con il numero di triangoli; ad esempio per una strip di 100 triangoli i vertici saranno 102.
 				</p>
 				<img  src= "assets/img/strips.png" width="600" vspace="5" hspace="width/2" style="padding-top: 10px ;">
 			</div>
@@ -116,7 +114,7 @@
 				<p>
 					Questo è un esempio di una mesh non-Manifold:
 				</p>
-				<p><img src = "assets/img/non-manifold.png"width="400" vspace="heigth/2" hspace="width/2"></p>
+				<p><img src = "assets/img/non-manifold.png"style="padding-top:25px; width: 400px;"></p>
 			</div>
 		</section>
 
@@ -131,7 +129,7 @@
 				<p>
                      Si denota comunemente con 𝒳 
 				</p>
-				<p><img src = "assets/img/formula.png"width="300" vspace="heigth/2" hspace="width/2"></p>
+				<p><img src = "assets/img/formula.png"width="250"></p>
 				<p><b>	
  					V = vertici
 					E = spigoli
@@ -143,6 +141,59 @@
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
+		<footer class="white-footer">
+			<div class="footer" >
+				<br><br>
+				<div class="black-text">
+					<div class="row">
+						<div class="column">
+							<h3>Sitografia</h3>
+							<p style="font-size: 14px;">
+								<br>
+								<a href="https://primer.dynamobim.org/it/05_Geometry-for-Computational-Design/5-7_meshes.html#">Computer grafica e Meshes</a>
+								<br>
+								<a href="https://en.wikipedia.org/wiki/Triangle_mesh">Mesh Triangolari</a>
+								<br>
+								<a href="https://it.wikipedia.org/wiki/Mesh_poligonale">Mesh Poligonali</a>
+								<br>
+								<a href="https://graphics.stanford.edu/courses/cs468-10-fall/LectureSlides/02_Basics.pdf">Basic concepts about Meshes</a>
+								<br>
+								<a href="https://youtu.be/Q30-nakUrSM?si=IUoj20_vRMATQ9tG ">3D Meshes</a>
+								<br>
+								<a href="https://youtu.be/kdJPeqAgHTc?si=5PIJffXrq3u1RpYz ">Manifolds</a>
+								<br>
+								<a href="https://thecodingtrain.com/ ">Tutorial and references</a>
+								<br>
+								<a href="https://it.wikipedia.org/wiki/Triangolazione_di_Delaunay">Triangolazione di Delaunay</a>
+								<br>
+								<a href="https://twiki.di.uniroma1.it/pub/Grafica3d/WebHome/Delaunay_T.pdf">Algoritmi per la triangolazione di Delaunay</a>
+								<br>
+								<a href="https://www.lanostra-matematica.org/2009/08/diagrammi-di-voronoi-e-triangolazioni.html">Confronto tra Delaunay e Voronoy</a>
+								<br>
+								<a href="https://youtu.be/Bxdt6T_1qgc?si=ZGIxqOxStOe7b_SK ">Coding Challenge 181: Weighted Voronoi Stippling</a>
+								<br>
+								<a href="https://p5js.org/ ">Sketches library</a>
+								<br>
+								<a href="https://it.wikipedia.org/wiki/Diagramma_di_Voronoi">Diagramma di Voronoi</a>
+								<br>
+								<a href="https://www.kdnuggets.com/2022/11/quick-overview-voronoi-diagrams.html">Concetti base: Voronoi</a>
+								<br>
+								<a href="https://youtu.be/ysLCuqcyJZA?si=pWF5hO_ ">Triangulations & Voronoi diagram</a>
+
+							</p>
+						</div>
+						
+				<div class="column">
+					<h3>About</h3>
+					<br>
+					<p style="font-size: 14px;">Pagina web prodotta da Alessia Candioli e Irene casetta <br> con l'obiettivo di portare un approfondimento sul tema delle mesh triangolari.<br>
+						 Gli sketches presenti nella pagina sono stati realizzati con la libreria di p5.js<br><br> Versione 1.0</p>
+				</div>
+				<div class="column">
+					<h3>Info</h3>
+					<br>
+					<p style="font-size: 14px;">Corso di Matematica per il design<br>Prof. Andreas Gysin<br>a.a. 2023/24<br>ISIA U</p>
+				</div>
 
 		<section>
 			<h4 class="titolo-sezione">05.<br>Bibliografia</h4>
@@ -167,51 +218,6 @@
 			</div>
 		</section>
 	</div>
-	<section class="filetto">
-		<h4 class="titolo-sezione">Bibliografia</h4>
-		<div class="contenuto-sezione">
-			<ul>
-				<a href=”https://en.wikipedia.org/wiki/Triangle_mesh”>https://en.wikipedia.org/wiki/Triangle_mesh</a> 
-				<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
-				<li>In cursus aliquam odio eu eleifend</li>
-				<li>Ut sed auctor magna</li>
-				<li>In hac habitasse platea dictumst</li>
-				<li>Aliquam aliquam nisl mi</li>
-				<li>Phasellus et orci elit</li>
-				<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-				<li>Nam consectetur lacus ante</li>
-				<li>Vestibulum et massa dolor</li>
-				<li>Aenean condimentum blandit eros non dapibus</li>
-				<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-				<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-				<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-			</ul>
-
-		</div>
-	</section>
-</div>
-
-<section class="filetto">
-	<h4 class="titolo-sezione">Bibliografia</h4>
-	<div class="contenuto-sezione">
-		<ul>
-			<a href=”https://en.wikipedia.org/wiki/Triangle_mesh”>https://en.wikipedia.org/wiki/Triangle_mesh</a> 
-			<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
-			<li>In cursus aliquam odio eu eleifend</li>
-			<li>Ut sed auctor magna</li>
-			<li>In hac habitasse platea dictumst</li>
-			<li>Aliquam aliquam nisl mi</li>
-			<li>Phasellus et orci elit</li>
-			<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-			<li>Nam consectetur lacus ante</li>
-			<li>Vestibulum et massa dolor</li>
-			<li>Aenean condimentum blandit eros non dapibus</li>
-			<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-			<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-			<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-		</ul>
-	</div>
-</section>
-</html>
+	</html>
 
 
